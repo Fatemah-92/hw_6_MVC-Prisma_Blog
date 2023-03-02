@@ -1,1 +1,1 @@
-# hw_6_MVC_Prisma
+# hw_6_MVC_Prisma(Blog)
