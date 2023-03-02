@@ -20,8 +20,7 @@ export const findAllPosts = async (req: Request, res: Response)=> {
 }
 
 //find user's post
-export const findOneUserPost = async (req: Request, res: Response)=> {
-    
+export const findOneUserPost = async (req: Request, res: Response)=> {  
     try {
             let post = await prisma.post.findFirst({
             where: {
@@ -52,11 +51,10 @@ export const findOneUserPost = async (req: Request, res: Response)=> {
 
 //update post
 export const updatePost = async (req: Request, res: Response)=> {
-    const id = req.params.id;
     const {title, idUser} = req.body;
     let updatePost = await prisma.post.update({
         where: {
-            id 
+            id: req.params.id
         },
             data: {
                 title,

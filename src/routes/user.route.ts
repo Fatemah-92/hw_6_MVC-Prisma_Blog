@@ -7,7 +7,7 @@ const route = Router()
 //create
 route.post('/', createUser)
 
-//find all users
+//find users
 route.get('/', findAllUsers);
 
 //find user
